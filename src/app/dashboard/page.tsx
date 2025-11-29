@@ -13,10 +13,12 @@ interface Collection {
 
 interface Flashcard {
     _id: string;
+    collectionId: string; // <-- add this
     german: string;
     english: string;
     arabic: string;
 }
+
 
 interface Session {
     _id: string;
