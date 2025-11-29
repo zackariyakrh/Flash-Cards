@@ -1,0 +1,392 @@
+.dashboard {
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.header {
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.mainView {
+    animation: fadeIn 0.5s ease;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+}
+
+.section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.createForm {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.createForm input {
+    flex: 1;
+}
+
+.collectionList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.collectionItem {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collectionItem:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.collectionItem.selected {
+    background: var(--primary-gradient);
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.statsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.statItem {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statInfo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.statRate {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--success-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.statDetails {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.statDate {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem;
+    font-style: italic;
+}
+
+.createView,
+.practiceView,
+.statsView {
+    animation: fadeIn 0.5s ease;
+}
+
+.createView h2,
+.statsView h2 {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.flashcardForm {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+}
+
+.flashcardList {
+    margin-top: 3rem;
+}
+
+.flashcardList h3 {
+    margin-bottom: 1.5rem;
+}
+
+.flashcardItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    transition: all var(--transition-normal);
+}
+
+.flashcardItem:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+}
+
+.flashcardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.practiceView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.practiceHeader {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.progress {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.score {
+    font-size: 1.1rem;
+}
+
+.flashcard {
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.flashcardFront h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.flashcardText {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.flashcardBack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.translation h4 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.translation p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.answerButtons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.answerButtons button {
+    flex: 1;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.statsView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.statsCard {
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+}
+
+.statsBig {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.statsCircle {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    box-shadow: var(--shadow-glow);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.statsItem {
+    text-align: center;
+}
+
+.statsNumber {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.statsLabel {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.statsActions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .headerContent {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .flashcardText {
+        font-size: 1.8rem;
+    }
+
+    .statsCircle {
+        width: 150px;
+        height: 150px;
+        font-size: 2.5rem;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
